@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(){
+            let num1 = document.getElementById("num1").value;
+            let num2 =  document.getElementById("num2").value;
+            console.log(typeof(num1));
+            
+            let add = Number(num1) + Number(num2);
+            str= ` <h1>Adition=${add}</h1>
+                    <h1>Sub=${num1-num2}</h1>
+                    <h1>mul=${num1*num2}</h1>
+                    <h1>div=${num1/num2}</h1>
+                    <h1>div=${num1%num2}</h1>`;
+            document.getElementById('result').innerHTML=str;        
+        }
+    </script>
+</head>
+<body>
+    <h1>Arithmentic operator Example</h1>
+    <form action="">
+        <label for="">Enter First Number</label>
+        <input type="text" name="" id="num1">
+        <br>
+        <br>
+        <label for="">Enter First Number</label>
+        <input type="text" name="" id="num2">
+
+        <input type="button" value="Submit" onclick="calc()">
+
+    </form>
+    <div id="result"></div>
+</body>
+</html>

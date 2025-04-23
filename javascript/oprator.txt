@@ -1,0 +1,5 @@
+Arithmetic + - * / %
+unary ++ --
+assignment = , +=,*=./=,-= // a+=10 ;a=a+10
+Relational operator < > <= >= != ==
+condition ?:   //(condition)?(true):(false)
