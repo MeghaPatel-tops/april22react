@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // If Example
+        function test(){
+            let num = prompt("Enter Num");
+            if(num % 2==0){
+                alert("Even number");
+            }
+            else{
+                alert("Odd Number");
+            }
+        }
+        function checkQuadrant(){
+            let x1= document.getElementById("x1").value;
+            let x2= document.getElementById("x2").value;
+            let str;
+            if(x1>0 && x2>0){
+                str="first";
+            }
+            else if(x1<0 && x2>0){
+                str="sec";
+            }
+            else if(x1<0 && x2<0){
+                str="third";
+            }
+            else if(x1>0 && x2<0){
+                str="forth";
+            }
+            else{
+                str="center";
+            }
+            
+            document.getElementById("result").innerHTML=str;
+        }
+        function maxNumberFind(){
+            let x1= Number(document.getElementById("xx1").value);//12
+            let x2= Number(document.getElementById("xx2").value);//799
+            let x3=Number( document.getElementById("x3").value);//81
+            let str;
+            str= (x1 > x2)?((x1 > x3)?"x1 is max":"x3 in is max"):((x2 > x3)?"x2 is max":"x3 is out max");
+            document.getElementById("result1").innerHTML=str;
+        }
+        function switchExample(){
+            let day = prompt("Enter the day between 1 to 7");
+            day=Number(day);
+            switch(day){
+                case 1:
+                    alert("Monday");
+                break;  
+                case 2:
+                    alert("Tuesday");
+                break; 
+                case 3:
+                    alert("Wednesday");
+                break; 
+                default:
+                    alert("Wrong choice");
+                break;      
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="test()">If Example</button>
+    <button onclick="switchExample()">Switch Example</button>
+
+    <fieldset>
+        <legend>Quadrant checker</legend>
+        <label for="">Enter X1</label>
+        <input type="text" name="" id="x1">
+        <br>
+        <br>
+        <label for="">Enter X2</label>
+        <input type="text" name="" id="x2"><br>
+        <br>
+        <input type="button" value="Check" onclick="checkQuadrant()">
+        <p id="result"></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Find Max Number</legend>
+        <label for="">Enter X1</label>
+        <input type="text" name="" id="xx1">
+        <br>
+        <br>
+        <label for="">Enter X2</label>
+        <input type="text" name="" id="xx2"><br>
+        <br>
+        <label for="">Enter X3</label>
+        <input type="text" name="" id="x3"><br>
+        <br>
+        <input type="button" value="Check" onclick="maxNumberFind()">
+        <p id="result1"></p>
+    </fieldset>
+</body>
+</html>
