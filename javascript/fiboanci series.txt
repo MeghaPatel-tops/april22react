@@ -1,0 +1,17 @@
+text
+
+x1=0
+x2=1
+ans= x1+x2 ; 0+1=1
+
+log ans
+
+step2
+x1=x2=1
+x2=ans=1
+ans = x1+x2  1+1=2
+
+step 3
+x1=x2 ;1
+x2=ans;2
+ans =x1+x2 =3

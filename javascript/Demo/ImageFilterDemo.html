@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            margin: 200px;
+        }
+        img{
+           
+            height: 300px;
+            width: 300px;
+            border-radius: 25px;
+            filter: blur(1%);
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <img src="https://thumbs.dreamstime.com/b/pink-flowers-float-clear-waters-hawaii-soft-white-sand-below-347952870.jpg" alt="" id="img1">
+        <button id="blur" onclick="filterImage('blur')">Blur</button>
+        <button id="brightness" onclick="filterImage('brightness')">Brightness</button>
+        <button id="contras"  onclick="filterImage('contras')" >Contras</button>
+        <button id="grayscale"  onclick="filterImage('grayscale')">grayscale</button>
+    </div>
+  
+</body>
+<script>
+   
+   
+
+       function filterImage(filterName){
+          let imgId = document.getElementById('img1');
+
+          if(filterName=="blur"){
+            imgId.style.filter="blur(10px)";
+          }
+          else if(filterName=="brightness"){
+            imgId.style.filter="brightness(50%)";
+          }
+          else if(filterName=="contras"){
+            imgId.style.filter="contrast(50%)";
+          }
+          else if(filterName=="grayscale"){
+            imgId.style.filter="grayscale(60%)";
+          }
+          
+       }
+    </script>
+</html>
