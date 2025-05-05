@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name="megha";
+        function basicFunction(){
+            let a=10;
+            console.log(a);
+            console.log(name);
+        }
+        basicFunction();
+        console.log(name);
+       // console.log(a);
+        //=================function with parametr==========
+        function calc(a,b){
+            console.log(`add=${a+b}`);
+            console.log(`sub=${a-b}`);
+            console.log(`div=${a/b}`);
+            console.log(`mul=${a*b}`);      
+        }
+
+        calc(12,34);
+         //=================function with default value==========
+         function test(x,y=0){
+            console.log(`x=${x} and y=${y}`);
+            
+         }
+         test(12);
+         //=================function with returning value========
+         function areaOfCircle(){
+            let r = prompt("Enter radius");
+            let area = 3.14*r*r;
+            return area;
+         }
+
+         alert(areaOfCircle());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

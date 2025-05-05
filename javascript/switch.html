@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 150px;
+            width: 150px;
+            border:5px solid black;
+        }
+    </style>
+    <script>
+            function styleChanger(){
+                let choice = document.getElementById('txt1').value;
+                let id= document.getElementById('div1');
+               // alert(typeof(choice));
+                choice  = Number(choice);
+                switch(choice){
+                    case 1:
+                        id.style.borderRadius="25px";
+                    break;
+                    case 2:
+                        id.style.borderRadius="50%";
+                    break;
+                    case 3:
+                        id.style.borderStyle="dotted";
+                    break;
+                    case 4:
+                    id.style.borderStyle="double";
+                    break;
+                    default:alert("wrong choice"); 
+                    break;   
+
+                }
+            }
+    </script>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="main" id="div1">
+
+        </div>
+      <fieldset>
+        <p> press 1 for Border-radius <br>
+            press 2 for circle<br>
+            press 3 for border-style dotted<br>
+            press 4 for border-style dotted<br>
+            </p>
+            <input type="text" name="" id="txt1">
+            <input type="button" value="Submit" onclick="styleChanger()">
+      </fieldset>
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //=========
+        let print = function(){
+            console.log(" function as expression  called");         
+        }
+
+      
+        let doTask= ()=>{
+            console.log("Arrow function called");
+            
+        }
+
+        function EvenOdd(even,odd){
+            let num= prompt("enter num");
+            if(num%2==0){
+                even(num)
+            }
+            else{
+                odd(num)
+            }
+        }
+        function even(num){
+            alert(`${num} is even`);
+        }
+        function odd(num){
+            alert(`${num} is odd`);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="print()">function as expression</button>
+    <button onclick="EvenOdd(even,odd)">CaLLBACK FUNCTION</button>
+    <button onclick="doTask()">Arrow function</button>
+</body>
+</html>
