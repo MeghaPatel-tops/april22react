@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            let user ={
+                Name:"Megha",
+                Email:"Email",
+                Contactno:9898898,
+                Address:"101 main street surat",
+            }
+            let str="";
+            for(let key in user){
+                str += `<p><b>${key}:</b>${user[key]}</p>`;
+            }
+            document.write(str);
+
+            let book={
+                author:"abc",
+                "p_date":"2019-09-09",
+                name:"abc"
+            }
+            book['price']=1200;
+            book.pages=120;
+            console.log(book);
+            
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

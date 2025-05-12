@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Basic array</h1>
+    <p id="one"></p>
+    <h1>Add element at END ===>push()</h1>
+    <p id="two"></p>
+     <h1>Remove element at END===>POP()</h1>
+    <p id="third"></p>
+      <h1>add element at Starting===>unshift()</h1>
+    <p id="forth"></p>
+      <h1>remove element at Starting===>shift()</h1>
+    <p id="five"></p>
+</body>
+ <script>
+        let subject = ["php","java",".net"];
+        str=subject.toString();
+        document.getElementById('one').innerHTML=str;
+
+        subject.push("Node");
+        str=subject.toString();
+        document.getElementById('two').innerHTML=str;
+
+         subject.pop();
+        str=subject.toString();
+        document.getElementById('third').innerHTML=str;
+
+        subject.unshift("Python");
+        str=subject.toString();
+        document.getElementById('forth').innerHTML=str;
+
+         subject.shift();
+        str=subject.toString();
+        document.getElementById('five').innerHTML=str;
+
+        for(let i =0 ;i <subject.length;i++){
+            console.log(subject[i]);        
+        }
+
+        for(let key in subject){
+            console.log(subject[key]);
+            
+        }
+    </script>
+</html>

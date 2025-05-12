@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        oid=100101;
+        let order={
+            oid:"order101_1",
+            uid:101,
+            total:"200.90",
+
+        }
+        order.printOrder = function(){
+            console.log(this.oid);
+            console.log(this.total);
+            
+        }
+        order.printOrder();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

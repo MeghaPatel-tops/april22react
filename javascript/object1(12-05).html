@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let user={
+            name:"Megha",
+            email:"m@gmail.com"
+        }
+        Object.seal(user);
+        //add properties in object
+        user.age=30;
+        console.log(user);
+
+        user.name="malay";
+
+        //delete properties of object
+        delete user.age;
+        console.log(user);    
+        
+        //object key returning
+        console.log(Object.keys(user));
+
+        //object value return
+        console.log(Object.values(user));
+        
+        //pair 
+        console.log(Object.entries(user));
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
