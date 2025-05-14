@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = ["php","java",".net","python"];
+
+        arr.forEach(function(item,index,arr){
+            str=`<h1>${item}</h1>`;
+            document.write(str);
+        })
+
+        delete arr[2];
+
+        console.log(arr);
+
+        arr.splice(2,1);
+
+
+        console.log(arr);
+
+        arr.splice(2,1,"Nodejs");
+         console.log(arr);
+
+         arr.splice(3,1,"react");
+          console.log(arr);
+
+
+          console.log(arr.slice(1,3))
+
+          let arr1=[1,2,34];
+          arr1=arr1.concat(arr);
+          console.log(arr1)
+        
+          console.log(arr.indexOf(-3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

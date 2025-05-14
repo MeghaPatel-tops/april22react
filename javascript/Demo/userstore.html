@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users =[];
+        function dispalyUser(){
+            let tid=document.getElementById('userdata');
+            str="";
+            users.forEach(function(item,index,users){
+                str+=` <tr>
+                    <td>${item.uname}</td>
+                         <td>${item.email}</td></tr>`
+            });
+            tid.innerHTML=str;
+        }
+        function userCreate(){
+            let uname = document.getElementById('uname').value;
+            let email= document.getElementById('email').value;
+            let user ={"uname":uname,"email":email}
+            users.push(user);
+            document.getElementById('uname').value="";
+            document.getElementById('email').value="";
+            console.log(users);
+            dispalyUser();
+        }
+        console.log(users);
+        
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            User Registration 
+        </legend>
+        <form >
+            <label for="">Username</label>
+            <input type="text" name="" id="uname">
+            <br><br>
+            <label for="">Email</label>
+            <input type="text" name="" id="email">
+            <br><br>
+            <input type="button" value="Submit" onclick="userCreate()">
+        </form>
+       
+    </fieldset>
+    <table>
+        <thead>
+            <tr>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody id="userdata">
+
+        </tbody>
+
+    </table>
+</body>
+</html>
