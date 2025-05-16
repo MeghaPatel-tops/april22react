@@ -6,13 +6,29 @@
     <title>Document</title>
     <script>
         let users =[];
+        function delItem(id){
+            alert(id);
+            users.splice(id,1);
+            dispalyUser();
+        }
+        function editItem(id){
+             alert(id);
+             document.getElementById('insert').style.visibilty='hidden';
+              document.getElementById('update').style.visibilty='visible';
+            document.getElementById('uname').value = `${users[id].uname}`;
+            document.getElementById('email').value= `${users[id].email}`;
+            document.getElementById('userid').value = `${id}`;
+        }
         function dispalyUser(){
             let tid=document.getElementById('userdata');
             str="";
             users.forEach(function(item,index,users){
                 str+=` <tr>
                     <td>${item.uname}</td>
-                         <td>${item.email}</td></tr>`
+                    <td>${item.email}</td>
+                    <td><button onclick="delItem(${index})">DELETE</button></td>
+                     <td><button onclick="editItem(${index})">EDIT</button></td>    
+                         </tr>`
             });
             tid.innerHTML=str;
         }
@@ -26,9 +42,32 @@
             console.log(users);
             dispalyUser();
         }
+
+        function userUpdate(){
+             let id = document.getElementById('userid').value;
+              let uname = document.getElementById('uname').value;
+            let email= document.getElementById('email').value;
+
+            users[id].uname =uname;
+            users[id].email=email;
+            dispalyUser();
+              document.getElementById('uname').value="";
+            document.getElementById('email').value="";
+             document.getElementById('userid').value="";
+        }
         console.log(users);
         
     </script>
+    <style>
+        table{
+            padding: 10px;
+            border: 2px solid black;
+        }
+        td,th{
+            padding: 10px;
+             border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
     <fieldset>
@@ -42,7 +81,10 @@
             <label for="">Email</label>
             <input type="text" name="" id="email">
             <br><br>
-            <input type="button" value="Submit" onclick="userCreate()">
+            <input type="hidden" name="" id="userid">
+            <input type="button" id="insert" value="Submit" onclick="userCreate()">
+            <input type="button" id="update" value="Update" onclick="userUpdate()" >
+            
         </form>
        
     </fieldset>
@@ -51,6 +93,7 @@
             <tr>
             <th>Username</th>
             <th>Email</th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody id="userdata">
