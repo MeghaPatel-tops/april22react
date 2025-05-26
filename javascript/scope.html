@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let pi=3.14;//Global Scope
+
+        function functionScopeExample(){//function scope
+             let m=10;
+             console.log(m);
+             function innerScope(){
+                { let n=90;}
+                {var x=20;}
+                // console.log(n);
+                  console.log(x);
+             }
+            //  console.log(n);
+           
+            
+             innerScope();
+            
+        }
+        functionScopeExample();
+            //    console.log(m);==>not accessible outside the function
+             
+     for(let i=1;i<=3;i++){
+        console.log(i);
+       
+     }
+      for(let i=12;i>=9;i--){
+        console.log(i);
+        
+     }
+     //console.log(i);
+     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

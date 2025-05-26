@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border:2px solid black;
+        }
+        td,th{
+            border: 3px solid blue;
+        }
+    </style>
+    <script>
+       let getProduct = new Promise((resolve,reject)=>{
+            fetch('https://fakestoreapi.com/products')
+                .then(response => response.json())
+                .then(data => resolve(data))
+                .catch(error=>reject(error));
+
+       });
+
+       getProduct.then(prepareProductTable)
+                .catch(()=>{
+                    
+                     str ` <tr><td>No Data Found</td></tr>`;
+                      document.getElementById('pdata').innerHTML = str;
+                });
+
+
+        function prepareProductTable(data){
+            let str="";
+           for(item of data){
+                str+= ` <tr>
+            <td>${item.title}</td>
+            <td>${item.description}</td>
+            <td><img src="${item.image}" alt="" height="50px" width="50px"></td>
+            <td>${item.price}</td>
+            <td>${item.category}</td>
+            
+        </tr>`
+            };
+          
+            document.getElementById('pdata').innerHTML = str;
+        }
+        
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+        <tbody id="pdata"></tbody>
+       
+    </table>
+</body>
+</html>
