@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1 id="uname">Welcome</h1>
+    <button onclick="logout()">Logout</button>
+</body>
+ <script>
+        let userLog = sessionStorage.getItem('email');
+        let userData = JSON.parse(userLog);
+        console.log(userData);
+        let str = `Welcome To app:${userData.uname}`;
+        document.getElementById('uname').innerHTML=str;
+
+        function logout(){
+            sessionStorage.removeItem('email');
+            window.location.href='login.html';
+        }
+    </script>
+</html>
