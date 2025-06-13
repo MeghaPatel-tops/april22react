@@ -5,7 +5,8 @@ import About from './components/About'
 import Login from './components/Login'
 import Navbar from './components/Navbar'
 import Userform from './components/Userform'
-import './App.css'
+import Userstyle from './components/Userstyle'
+// import './App.css'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   return (
     <>
       <div className="container">
-          <Userform />
+         <Userstyle />
       </div>
      
     </>
