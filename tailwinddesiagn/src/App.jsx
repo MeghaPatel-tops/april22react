@@ -7,6 +7,8 @@ import Footer from './Components/footer'
 import Mainbox from './Components/Mainbox'
 import Calc from './Components/Calc'
 import Subjectlist from './Components/Subjectlist'
+import Userdata from './Components/Userdata'
+import Products from './Components/Products'
 
 
 
@@ -18,8 +20,7 @@ function App() {
 
   return (
     <>
-    <Calc />
-    <Subjectlist />
+    <Products />
     </>
   )
 }
