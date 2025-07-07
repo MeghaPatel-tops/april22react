@@ -9,6 +9,7 @@ import Calc from './Components/Calc'
 import Subjectlist from './Components/Subjectlist'
 import Userdata from './Components/Userdata'
 import Products from './Components/Products'
+import Users from './Components/Users'
 
 
 
@@ -20,7 +21,8 @@ function App() {
 
   return (
     <>
-    <Products />
+    
+    <Users />
     </>
   )
 }
