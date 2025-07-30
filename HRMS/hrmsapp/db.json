@@ -1,0 +1,24 @@
+{
+  "employee": [
+    {
+      "id": "8ef5",
+      "empname": "megha",
+      "email": "megha123@gmnail.com",
+      "pwd": "12345678",
+      "contact": "9879878789",
+      "adharid": "bmbmbbnb",
+      "panid": "mnnnmnj,m",
+      "pimage": "C:\\fakepath\\new.jpg"
+    },
+    {
+      "id": "5435",
+      "empname": "Kishan",
+      "email": "kishan@gmail.com",
+      "pwd": "12345678",
+      "contact": "980097777",
+      "adharid": "gggjhgggjhgg",
+      "panid": "jhhgghjgjhghg",
+      "pimage": "C:\\fakepath\\new.jpg"
+    }
+  ]
+}
