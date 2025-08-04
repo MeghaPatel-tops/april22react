@@ -28,6 +28,7 @@ function Login() {
       });
 
       if(currentUser && currentUser != ""){
+         currentUser =currentUser[0];
           localStorage.setItem('user',JSON.stringify(currentUser));
           navigate('/home')
       }

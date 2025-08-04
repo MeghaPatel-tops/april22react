@@ -8,6 +8,7 @@ import Empindex from './Components/Employee/Empindex'
 import Empcreate from './Components/Employee/Empcreate'
 import Home from './Components/home'
 import Login from './Components/Employee/login'
+import Userroleset from './Components/Admin/Userroleset'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
            <Route path='/employee'  element={<Empindex /> }></Route>
           <Route path='/employeecreate'  element={<Empcreate /> }></Route>
           <Route path='/payroll' element={<Payroll />}></Route>
+          <Route path='/userroleset' element={<Userroleset />}></Route>
           
         </Routes>
     </>

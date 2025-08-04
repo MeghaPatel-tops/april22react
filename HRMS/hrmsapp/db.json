@@ -1,6 +1,16 @@
 {
   "employee": [
     {
+      "id": "8ef4",
+      "empname": "admin",
+      "email": "admin@gmail.com",
+      "pwd": "Admin123",
+      "contact": "9879878789",
+      "adharid": "bmbmbbnb",
+      "panid": "mnnnmnj,m",
+      "pimage": "C:\\fakepath\\new.jpg"
+    },
+    {
       "id": "8ef5",
       "empname": "megha",
       "email": "megha123@gmnail.com",
@@ -19,6 +29,18 @@
       "adharid": "gggjhgggjhgg",
       "panid": "jhhgghjgjhghg",
       "pimage": "C:\\fakepath\\new.jpg"
+    }
+  ],
+  "role_permision": [
+    {
+      "id": "101",
+      "empid": "8ef4",
+      "userRoleId": 1
+    },
+    {
+      "id": "78dd",
+      "userRoleId": "3",
+      "empid": "8ef5"
     }
   ]
 }

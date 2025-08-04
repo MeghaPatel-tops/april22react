@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Aside() {
+function Aside(props) {
+  let userid= props.userData.roledata.userRoleId;
+  
   return (
     
     <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark mt-1"  style={{width:'280px',height:'700px'}}>
@@ -19,13 +21,16 @@ function Aside() {
       <li>
        <Link to="/" className="nav-link text-white" >Dashboard</Link>
       </li>
-      <li>
+      {
+        (userid==1)?<div> <li>
         
         <Link to="/employee" className="nav-link text-white" >Employee</Link>
       </li>
       <li>
         <Link to="/payroll" className="nav-link text-white" >Payroll</Link>
-      </li>
+      </li></div>:''
+      }
+     
       <li>
         <a href="#" className="nav-link text-white">
           Customers
